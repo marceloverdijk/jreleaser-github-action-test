@@ -31,6 +31,7 @@ jreleaser {
         description = "JReleaser GitHub Action Test"
         license = "CC-BY-4.0"
         licenseUrl = "https://spdx.org/licenses/CC-BY-4.0.html"
+        copyright = "${new Date().year} Marcel"
     }
     files {
         artifact {
@@ -42,11 +43,9 @@ jreleaser {
     }
     release {
         github {
-            enabled = false
             owner = "marceloverdijk"
             name = "jreleaser-github-action-test"
             username = "marceloverdijk"
-            // token = '__DO_NOT_SET_HERE__'
             commitAuthor {
                 name = "marceloverdijk"
                 email = "marceloverdijk@acme.com"
@@ -54,6 +53,7 @@ jreleaser {
             changelog {
                 enabled = false
             }
+            skipTag = true
         }
     }
 }
