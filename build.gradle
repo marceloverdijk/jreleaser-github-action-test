@@ -36,11 +36,11 @@ jreleaser {
     files {
         artifact {
             // path = "${buildDir}/distributions/foo-${project.version}.zip"
-            path = "${buildDir}/distributions/foo-2022.0.0.alpha11.zip"
+            path = "${buildDir}/distributions/foo-2022.0.0.alpha12.zip"
         }
         artifact {
             // path = "${buildDir}/distributions/bar-${project.version}.zip"
-            path = "${buildDir}/distributions/bar-2022.0.0.alpha11.zip"
+            path = "${buildDir}/distributions/bar-2022.0.0.alpha12.zip"
         }
     }
     release {
