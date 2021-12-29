@@ -1,0 +1,63 @@
+plugins {
+    id "java"
+    id "distribution"
+    id "org.jreleaser" version "0.10.0"
+}
+
+group = "com.acme"
+
+repositories {
+    mavenCentral()
+}
+
+distributions {
+    foo {
+        distributionBaseName = "foo"
+        contents {
+            from "src/foo.txt"
+        }
+    }
+    bar {
+        distributionBaseName = "bar"
+        contents {
+            from "src/bar.txt"
+        }
+    }
+}
+
+jreleaser {
+    project {
+        name = "jreleaser-github-action-test"
+        description = "JReleaser GitHub Action Test"
+        license = "CC-BY-4.0"
+        licenseUrl = "https://spdx.org/licenses/CC-BY-4.0.html"
+    }
+    files {
+        artifact {
+            path = "${buildDir}/distributions/foo-${project.version}.zip"
+        }
+        artifact {
+            path = "${buildDir}/distributions/bar-${project.version}.zip"
+        }
+    }
+    release {
+        github {
+            enabled = false
+            owner = "marceloverdijk"
+            name = "jreleaser-github-action-test"
+            username = "marceloverdijk"
+            // token = '__DO_NOT_SET_HERE__'
+            commitAuthor {
+                name = "marceloverdijk"
+                email = "marceloverdijk@acme.com"
+            }
+            changelog {
+                enabled = false
+            }
+        }
+    }
+}
+
+tasks.withType(Tar) {
+    enabled = false
+}
