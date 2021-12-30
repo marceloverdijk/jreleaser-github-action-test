@@ -30,8 +30,11 @@ jreleaser {
         name = "jreleaser-github-action-test"
         versionPattern = "CALVER:YYYY.MINOR.MICRO.MODIFIER"
         description = "JReleaser GitHub Action Test"
+        website = "https://github.com/marceloverdijk/jreleaser-github-action-test"
+        authors = ["Mars"]
         license = "CC-BY-4.0"
         licenseUrl = "https://spdx.org/licenses/CC-BY-4.0.html"
+        docsUrl = "https://github.com/marceloverdijk/jreleaser-github-action-test"
         copyright = "${new Date().year} Marcel"
     }
     files {
