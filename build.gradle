@@ -28,6 +28,7 @@ distributions {
 jreleaser {
     project {
         name = "jreleaser-github-action-test"
+        versionPattern = "CALVER:YYYY.MINOR.MICRO.MODIFIER"
         description = "JReleaser GitHub Action Test"
         license = "CC-BY-4.0"
         licenseUrl = "https://spdx.org/licenses/CC-BY-4.0.html"
