@@ -62,7 +62,7 @@ jreleaser {
     announce {
         twitter {
             active = "ALWAYS"
-            status = "TEST TWEET: 🚀 {{projectNameCapitalized}} {{projectVersion}} has been released! {{releaseNotesUrl}}""
+            status = "TEST TWEET: 🚀 {{projectNameCapitalized}} {{projectVersion}} has been released! {{releaseNotesUrl}}"
         }
     }
 }
