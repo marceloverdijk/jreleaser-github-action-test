@@ -59,6 +59,12 @@ jreleaser {
             skipTag = true
         }
     }
+    announce {
+        twitter {
+            active = "ALWAYS"
+            status = "TEST TWEET: 🚀 {{projectNameCapitalized}} {{projectVersion}} has been released! {{releaseNotesUrl}}""
+        }
+    }
 }
 
 tasks.withType(Tar) {
